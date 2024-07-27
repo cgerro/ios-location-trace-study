@@ -1,0 +1,194 @@
+syntax = "proto3";
+
+message Gsp36RevgeoResponse {
+    int32 field1 = 1;
+    int32 field2 = 2;
+    string country_language = 5;
+    string country_code = 6;
+    optional Gsp36RevgeoString3 field10 = 10;
+}
+
+message Gsp36RevgeoString3 {
+  int32 unknown_varint1 = 1;
+  Gsp36RevgeoSubstring_10 substring10 = 101;
+}
+
+message Gsp36RevgeoSubstring_10 {
+  Gsp36RevgeoSubstring_11 substring11 = 1;
+  repeated Gsp36RevgeoSubstring_12 substring12 = 2;
+}
+
+message Gsp36RevgeoSubstring_11 {
+  int32 unknown_varint2 = 2;
+  repeated Gsp36RevgeoString string = 4;
+  int32 unknown_varint5 = 5;
+  Gsp36RevgeoString1 field7 = 7;
+}
+
+message Gsp36RevgeoSubstring_12 {
+  repeated Gsp36RevgeoString string = 4;
+}
+
+
+message Gsp36RevgeoString1 {
+  Gsp36RevgeoSubstring6 substring6 = 1;
+}
+
+message Gsp36RevgeoString2 {
+  repeated Gsp36RevgeoString string = 4;
+}
+
+message Gsp36RevgeoSubstring6 {
+  Gsp36RevgeoLocation location = 2;
+  int32 unknown_varint3 = 3;
+  int64 unknown_varint4 = 4;
+  int32 unknown_varint50 = 50;
+}
+
+message Gsp36RevgeoString {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint5 = 5;
+  int32 unknown_varint6 = 6;
+  optional Gsp36RevgeoSubstring substring = 8;
+  repeated string apple_service = 9;
+  int32 unknown_varint10 = 10;
+  int32 unknown_varint12 = 12;
+}
+
+message Gsp36RevgeoSubstring {
+  optional Gsp36RevgeoSubstring7 substring7 = 1;
+  optional Gsp36RevgeoSubstring1 substring1 = 2;
+  optional Gsp36RevgeoSubstring9 substring9 = 4;
+  optional Gsp36RevgeoSubstring2 substring2 = 77;
+  optional Gsp36RevgeoSubstring4 substring4 = 31;
+}
+
+message Gsp36RevgeoSubstring9 {
+  Gsp36RevgeoLocations locations = 1;
+}
+
+message Gsp36RevgeoLocations {
+  double latitude1 = 5;
+  double longitude1 = 6;
+  double latitude2 = 7;
+  double longitude2 = 8;
+  int32 unknown_varint10 = 10;
+}
+
+message Gsp36RevgeoSubstring7 {
+  optional int32 unknown_varint1 = 1;
+  Gsp36RevgeoSubstring8 substring8 = 10 ;
+  optional int32 unknown_varint19 = 19;
+}
+
+message Gsp36RevgeoSubstring8 {
+  string country_language = 1;
+  string city = 3;
+}
+
+message Gsp36RevgeoSubstring1 {
+  Gsp36RevgeoLocation location = 1;
+  optional double unknown_double2 = 2;
+  optional Gsp36RevgeoTimeZone time_zone = 4;
+  optional int32 unknown_varint6 = 6;
+  optional Gsp36RevgeoDataSource data_source = 7;
+}
+
+message Gsp36RevgeoLocation {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message Gsp36RevgeoTimeZone {
+  string time_zone = 1;
+}
+
+message Gsp36RevgeoDataSource {
+  string data_source = 1;
+}
+
+message Gsp36RevgeoSubstring2 {
+  Gsp36RevgeoSubstring3 substring3 = 1;
+  string country = 2;
+  string iso3166_2_code = 3; // FR-ARA = France - Auvergne Rhône Alpes
+}
+
+message Gsp36RevgeoSubstring3 {
+  double unknown_double1 = 1;
+  double unknown_double2 = 2;
+}
+
+message Gsp36RevgeoSubstring4 {
+  Gsp36RevgeoSubstring5 substring5 = 1;
+}
+
+message Gsp36RevgeoSubstring5 {
+  int32 unknown_varint1 = 1;
+  string version = 2;
+  Gsp36RevgeoCountryCode country_code = 3;
+  Gsp36RevgeoServiceInfo service_info = 4;
+  Gsp36RevgeoStreet street = 101;
+}
+
+message Gsp36RevgeoCountryCode {
+  string code_country = 1;
+  string country_iphone = 2;
+  string unknown_string = 3;
+}
+
+message Gsp36RevgeoServiceInfo {
+  string service = 1;
+  int64 unknown_varint2 = 2;
+  string function = 3;
+  string version = 4;
+}
+
+message Gsp36RevgeoStreet {
+  string street_number = 1;
+  Gsp36RevgeoAddress address = 2;
+  string street_strange = 4;
+  Gsp36RevgeoAddressInfoSecond address_info_second = 5;
+  string field7 = 7;
+  Gsp36RevgeoAddressInfoThird field100 = 100;
+}
+
+message Gsp36RevgeoAddress {
+  repeated string address_data = 11;
+  Gsp36RevgeoAddressInfoFirst address_info_first = 15;
+}
+
+message Gsp36RevgeoAddressInfoFirst {
+  string country = 1;
+  string country_code = 2;
+  string region = 3;
+  string department = 5;
+  string city = 6;
+  string postal_code = 7;
+  string street = 10;
+  string number = 11;
+  string street_number = 12;
+}
+
+message Gsp36RevgeoAddressInfoSecond {
+  string country1 = 1;
+  string country2 = 2;
+  string region = 3;
+  string department = 5;
+  string city = 6;
+  string street = 10;
+  optional string unknown11 = 11;
+  string unknown12 = 12;
+}
+
+
+message Gsp36RevgeoAddressInfoThird {
+  string city1 = 1;
+  string street = 2;
+  string street_number = 5;
+  string city2 = 6;
+}
+
+
+

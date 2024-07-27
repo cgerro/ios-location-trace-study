@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package aploc.request;
+
+message AplocRequest {
+    optional AplocDeviceInfo device_info = 1;
+    repeated AplocLongStringData long_string_data = 2;
+}
+
+message AplocDeviceInfo {
+    string device_model = 1;
+    string os_version = 2;
+}
+
+message AplocLongStringData {
+    optional AplocSubData1 sub_data1 = 1;
+    repeated AplocLocation location = 2;
+    repeated AplocBssidInfo bssid_info = 3;
+}
+
+message AplocSubData1 {
+    int64 unknown_varint1 = 1;
+    int32 unknown_varint2 = 2;
+    int32 unknown_varint3 = 3;
+    double timestamp = 4;
+    int32 unknown_varint5 = 5;
+}
+
+message AplocLocation {
+    double latitude = 1;
+    double longitude = 2;
+    float unknown_float3 = 3;
+    float altitude = 5;
+    float unknown_float6 = 6;
+    double timestamp = 9;
+    int32 unknown_varint13 = 13;
+    AplocInnerData inner_data18 = 18;
+    AplocInnerData inner_data19 = 19;
+    AplocInnerData inner_data20 = 20;
+}
+
+message AplocInnerData {
+    int32 inner_varint1 = 1;
+    int32 inner_varint2 = 2;
+}
+
+message AplocBssidInfo {
+    string bssid = 1;
+    int32 signal_strength = 2;
+    int32 channel = 3;
+    double unknown_double4 = 4; // Pourrait être SNR (ratio signal/Bruit) ou la qualité du signal
+    double timestamp = 5;
+}

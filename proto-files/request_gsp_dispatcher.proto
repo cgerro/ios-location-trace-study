@@ -1,0 +1,158 @@
+syntax = "proto3";
+
+package gsp.dispatcher.request;
+
+message GspDispatcherRequest {
+  GspDispatcherServiceData service_data = 1;
+  GspDispatcherCountryData country_data = 2;
+  string country_code = 3;
+  repeated GspDispatcherSubdata subdata = 5;
+  int32 unknown_varint7 = 7;
+  GspDispatcherSubstring1 substring1 = 8;
+  string country = 9;
+}
+
+message GspDispatcherSubdata {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint3 = 3;
+  optional GspDispatcherSubdata6 subdata6 = 5;
+}
+
+message GspDispatcherSubdata6 {
+  optional GspDispatcherSubdata8 subdata8_4 = 7;
+  optional GspDispatcherSubdata8 subdata8_5 = 11;
+  optional GspDispatcherSubdata7 subdata7_1 = 15;
+  optional GspDispatcherSubdata7 subdata7_4 = 23;
+  optional GspDispatcherSubdata8 subdata8_1 = 26;
+  optional string unknown_string30 = 30;
+  optional GspDispatcherSubdata10 subdata10 = 31;
+  optional GspDispatcherSubdata8 subdata8_3 = 36;
+  optional GspDispatcherSubdata7 subdata7_3 = 40;
+  optional string unknown_string42 = 42;
+  optional string unknown_string55 = 55;
+  optional GspDispatcherSubdata8 subdata8_2 = 57;
+  optional string unknown_string59 = 59;
+  optional GspDispatcherSubdata7 subdata7_2 = 65;
+  optional GspDispatcherSubdata7 subdata7_6 = 66;
+  optional string unknown_string71 = 71;
+  optional GspDispatcherSubdata7 subdata7_5 = 84;
+  optional string unknown_string44 = 44;
+}
+
+message GspDispatcherSubdata7 {
+  optional int32 unknown_varint1 = 1;
+  optional int32 unknown_varint2 = 2;
+  optional int32 unknown_varint3 = 3;
+  optional int32 unknown_varint4 = 4;
+}
+
+message GspDispatcherSubdata8 {
+  repeated GspDispatcherSubdata12 subdata12 = 1;
+  optional int32 unknown_varint2 = 2;
+  optional GspDispatcherSubdata13 subdata13_1 = 5;
+  optional GspDispatcherSubdata13 subdata13_2 = 6;
+  optional GspDispatcherSubdata13 subdata13_3 = 7;
+  optional int32 unknown_varint8 = 8;
+}
+
+message GspDispatcherSubdata10 {
+  string version = 1;
+}
+
+message GspDispatcherSubdata11 {
+  int32 unknown_varint1 = 1;
+}
+
+message GspDispatcherSubdata12 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message GspDispatcherSubdata13 {
+  optional GspDispatcherSubdata14 subdata14 = 1;
+  optional int32 unknown_varint2 = 2;
+}
+
+message GspDispatcherSubdata14 {
+  int64 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message GspDispatcherServiceData {
+  string service = 1;
+  string version = 2;
+  string unknown_string3 = 3;
+  string model = 4;
+  string ios_version = 5;
+  int32 unknown_varint7 = 7;
+  GspDispatcherSubdata1 subdata1 = 8;
+  int32 unknown_varint9 = 9;
+  int32 unknown_varint12 = 12;
+  GspDispatcherSubdata2 subdata2 = 13;
+  string os = 14;
+  GspDispatcherSubdata15 subdata17 = 17;
+  double unknown_double18 = 18;
+}
+
+message GspDispatcherSubdata1 {
+  int64 unknown_varint1 = 1;
+  int64 unknown_varint2 = 2;
+}
+
+message GspDispatcherSubdata2 {
+  int32 unknown_varint1 = 1;
+  string uuid = 2;
+}
+
+message GspDispatcherCountryData {
+  string language = 1;
+  string country_language = 3;
+  string unknown_string9 = 9;
+  int32 unknown_varint10 = 10;
+  int32 unknown_varint11 = 11;
+  int32 unknown_varint12 = 12;
+  int32 unknown_varint16 = 16;
+  int32 unknown_varint19 = 19;
+  GspDispatcherSubdata3 subdata3 = 23;
+  int32 unknown_varint26 = 26;
+  string unknown_string28 = 28;
+  string country_code = 30;
+  int32 unknown_varint31 = 31;
+  GspDispatcherSubdata4 subdata4 = 100;
+}
+
+message GspDispatcherSubdata3 {
+  repeated int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message GspDispatcherSubdata4 {
+  GspDispatcherSubdata5 subdata5 = 5;
+}
+
+message GspDispatcherSubdata5 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message GspDispatcherSubstring1 {
+  GspDispatcherSubstring2 substring2 = 2;
+}
+
+message GspDispatcherSubstring2 {
+  int32 unknown_varint2 = 2;
+  GspDispatcherAddress address = 4;
+}
+
+message GspDispatcherAddress {
+  string country = 1;
+  string language = 2;
+  string city = 6;
+  string postal_code = 7;
+  string street_number = 10;
+}
+
+message GspDispatcherSubdata15 {
+  int32 unknown_varint1 = 1;
+  float unknown_float2 = 2;
+}

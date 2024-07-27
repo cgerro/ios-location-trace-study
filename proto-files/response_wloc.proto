@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package wloc.response;
+
+message WlocResponse {
+  repeated WlocCellularResponse cellular_response1 = 1; // je pense que c'est pour les cellules 3G (UMTS)
+  repeated WlocWifiResponse wifi_response = 2;
+  repeated WlocCellularResponse cellular_response2 = 22; // cellules 4G/5G
+}
+
+message WlocWifiResponse {
+  string bssid = 1;
+  WlocLocation location_info = 2;
+  int32 unknown_varint21 = 21; // valeur fixe: 1 ou 6
+  int32 unknown_varint22 = 22; // valeur fixe: 0 ou 1
+}
+
+/*
+Les coordonnées géographiques sont généralement stockées comme entiers pour éviter les imprécisions des flottants. Elles sont souvent multipliées par 107107 ou 108108 pour conserver la précision.
+ */
+
+message WlocLocation {
+  int64 latitude = 1;
+  int64 longitude = 2;
+  int64 horizontal_accuracy = 3;
+  optional int32 unknown_varint4 = 4;
+  int64 altitude = 5; // -5000 si inconnue sinon faire * 10^-2
+  int64 vertical_accuracy = 6;
+  optional int64 unknown_varint11 = 11;
+  optional int64 unknown_varint12 = 12;
+}
+
+message WlocCellularResponse {
+  int32 mcc = 1; // Mobile Country Code
+  int32 mnc = 2; // Mobile Network Code
+  int32 cell_id = 3; // Cell Identifier
+  int32 lac = 4; // Location Area Code
+  WlocCellDetails cell_details = 5;
+  int32 unknown_varint6 = 6;
+  int32 unknown_varint7 = 7;
+}
+
+message WlocCellDetails {
+  int64 latitude = 1;
+  int64 longitude = 2;
+  int64 horizontal_accuracy = 3;
+  int32 altitude = 4; // tjr 0 avec les réseaux cellulaires?
+  int32 unknown_varint11 = 11;
+  int32 unknown_varint12 = 12;
+}

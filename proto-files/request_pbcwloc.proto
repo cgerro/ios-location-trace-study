@@ -1,0 +1,89 @@
+syntax = "proto3";
+
+package pbcwloc.request;
+
+message PbcwlocRequest {
+  PbcwlocDeviceInfo device_info = 1;
+  repeated PbcwlocWifiRequest wifi_request = 3;
+  repeated PbcwlocCellularRequest cellular_request = 5;
+}
+
+message PbcwlocDeviceInfo {
+    string hardware_version = 1;
+    string os_version = 2;
+}
+
+
+message PbcwlocWifiRequest {
+  string bssid = 1;
+  int32 channel = 2;
+  int32 signal_strength = 3;
+  optional PbcwlocLocationInfo location_info = 4;
+  int32 unknown_varint7 = 7;
+  double timestamp = 8;
+  int32 unknown_varint9 = 9;
+}
+
+message PbcwlocCellularRequest {
+  int32 mcc = 1;  // Mobile Country Code
+  int32 mnc = 2;  // Mobile Network Code
+  int32 lac = 3; // Tac / Lac (Location Area Code) -> Region
+  int32 cell_id = 4;
+  int32 EARFCN_DL = 5;
+  int32 PCI = 6;
+  int32 band_info = 7;
+  PbcwlocLocationInfo location_info = 8;
+  string operator = 10;
+  double unknown_double11 = 11;
+  double unknown_double12 = 12;
+  int32 unknown_varint14 = 14;
+  int32 unknown_varint15 = 15;
+  int32 unknown_varint16 = 16;
+  PbcwlocString string = 21;
+  int32 unknown_varint22 = 22;
+  int32 unknown_varint23 = 23;
+  string operator_bis = 24;
+  int32 unknown_varint25 = 25;
+  int32 unknown_varint31 = 31;
+  int32 unknown_varint32 = 32;
+  int32 unknown_varint34 = 34;
+  int32 unknown_varint35 = 35;
+}
+
+
+message PbcwlocLocationInfo {
+  double latitude = 1;
+  double longitude = 2;
+  double horizontal_accuracy = 3; // PAS SURE À 100%
+  float altitude = 5;
+  double vertical_accuracy = 6; // PAS SURE À 100%
+  optional float unknown_float7 = 7;
+  optional float unknown_float8 = 8;
+  double timestamp = 9;
+  int32 unknown_varint13 = 13;
+  int32 unknown_varint16 = 16;
+  int32 unknown_varint17 = 17;
+  PbcwlocInnerData inner_data18 = 18;
+  PbcwlocInnerData inner_data19 = 19;
+  PbcwlocInnerData inner_data20 = 20;
+  optional float unknown_float21 = 21;
+  optional float unknown_float22 = 22;
+}
+
+message PbcwlocInnerData {
+  int32 inner_varint1 = 1;
+  int32 inner_varint2 = 2;
+}
+
+message PbcwlocString {
+  repeated PbcwlocSubstring substring = 4;
+}
+
+message PbcwlocSubstring {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  int32 unknown_varint3 = 3;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint5 = 5;
+  int32 unknown_varint6 = 6;
+}

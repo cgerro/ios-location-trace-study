@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package wloc.request;
+
+message WlocRequest {
+  repeated WlocCellularRequest cellular_request1 = 1; // dans un paquet, la structure cell était différente de d'habitude
+  repeated WlocWifiRequest wifi_request = 2;
+  repeated WlocCellularRequest cellular_request2 = 25;
+  optional int32 info_mask = 3;  // apparaît dans le cadre de WifiRequest
+  optional int32 channel = 4; // apparaît dans le cadre de WifiRequest
+  int32 unknown_varint31 = 31; // valeur fixe: 1
+  int32 unknown_varint32 = 32; // valeur fixe: 2
+  WlocClientInfo client_info = 33;
+}
+
+message WlocWifiRequest {
+  string bssid = 1; // Adresse MAC du point d'accès Wi-Fi
+}
+
+message WlocCellularRequest {
+  int32 mcc = 1; // Mobile Country Code
+  int32 mnc = 2; // Mobile Network Code
+  int32 cell_id = 3; // Cell Identifier
+  int32 lac = 4; // Location Area Code
+}
+
+message WlocClientInfo {
+  string os_version = 1; // Version du système d'exploitation
+  string device_model = 2; // Modèle de l'appareil
+}
+
+message StrangeWlocRequest {
+  int64 latitude = 1;
+  int64 longitude = 2;
+  optional int32 info_mask = 3;  // apparaît dans le cadre de WifiRequest
+  optional int32 channel = 4; // apparaît dans le cadre de WifiRequest
+  int32 unknown_varint31 = 31; // valeur fixe: 1
+  int32 unknown_varint32 = 32; // valeur fixe: 2
+  int32 unknown_varint33 = 33; // valeur fixe: 1
+  int32 unknown_varint34 = 34; // valeur fixe: 2
+}

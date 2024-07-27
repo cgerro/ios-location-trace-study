@@ -1,0 +1,181 @@
+syntax = "proto3";
+
+package gsp57.revgeo.request;
+
+message Gsp57RevgeoRequest {
+  Gsp57RevgeoServiceData service_data = 1;
+  Gsp57RevgeoCountryData country_data = 2;
+  string country_code = 3;
+  repeated Gsp57RevgeoSubdata subdata = 5;
+  int32 unknown_varint7 = 7;
+  Gsp57RevgeoSubstring1 substring1 = 8;
+  string country = 9;
+}
+
+message Gsp57RevgeoSubdata {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint3 = 3;
+  optional Gsp57RevgeoSubdata6 subdata6 = 5;
+}
+
+message Gsp57RevgeoServiceData {
+  string service = 1;
+  string version = 2;
+  string unknown_string3 = 3;
+  string model = 4;
+  string ios_version = 5;
+  int32 unknown_varint7 = 7;
+  Gsp57RevgeoSubdata1 subdata1 = 8;
+  int32 unknown_varint9 = 9;
+  int32 unknown_varint12 = 12;
+  Gsp57RevgeoSubdata2 subdata2 = 13;
+  string os = 14;
+  double unknown_double18 = 18;
+}
+
+message Gsp57RevgeoCountryData {
+  string language = 1;
+  string country_code = 3;
+  string unknown_string9 = 9;
+  int32 unknown_varint10 = 10;
+  int32 unknown_varint11 = 11;
+  int32 unknown_varint12 = 12;
+  int32 unknown_varint16 = 16;
+  int32 unknown_varint19 = 19;
+  Gsp57RevgeoSubdata3 subdata3 = 23;
+  int32 unknown_varint26 = 26;
+  string unknown_string28 = 28;
+  string country = 30;
+  int32 unknown_varint31 = 31;
+  Gsp57RevgeoSubdata4 subdata4 = 100;
+}
+
+//message Os {
+//  double unknown_double13 = 13;
+//}
+
+message Gsp57RevgeoSubdata1 {
+  int64 unknown_varint1 = 1;
+  int64 unknown_varint2 = 2;
+}
+
+message Gsp57RevgeoSubdata2 {
+  int32 unknown_varint1 = 1;
+  string uuid = 2;
+}
+
+message Gsp57RevgeoSubdata3 {
+  repeated int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp57RevgeoSubdata4 {
+  Gsp57RevgeoSubdata5 subdata5 = 5;
+}
+
+message Gsp57RevgeoSubdata5 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp57RevgeoSubdata6 {
+  optional Gsp57RevgeoSubdata16 subdata16 = 7;
+  optional Gsp57RevgeoSubdata15 subdata15 = 11;
+  optional Gsp57RevgeoSubdata8 subdata8 = 15;
+  optional Gsp57RevgeoSubdata8 subdata8_1 = 23;
+  optional Gsp57RevgeoSubdata9 subdata9 = 26;
+  optional string unknown_string30 = 30;
+  optional Gsp57RevgeoSubdata7 subdata7 = 31;
+  optional Gsp57RevgeoSubdata12 subdata12 = 36;
+  optional Gsp57RevgeoSubdata14 subdata14 = 40;
+  optional string unknown_string42 = 42;
+  optional string unknown_string44 = 44;
+  optional string unknown_string55 = 55;
+  optional Gsp57RevgeoSubdata11 subdata11 = 57;
+  optional string unknown_string59 = 59;
+  optional Gsp57RevgeoSubdata13 subdata13 = 65;
+  optional Gsp57RevgeoSubdata10 subdata10_1 = 66;
+  optional string unknown_string71 = 71;
+  optional Gsp57RevgeoSubdata18 subdata18 = 84;
+}
+
+message Gsp57RevgeoSubdata8 {
+  int32 unknown_varint1 = 1;
+}
+
+message Gsp57RevgeoSubdata7 {
+  string version = 1;
+}
+
+message Gsp57RevgeoSubdata9 {
+  repeated Gsp57RevgeoSubdata10 subdata10 = 1;
+}
+
+message Gsp57RevgeoSubdata10 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp57RevgeoSubdata11 {
+  repeated Gsp57RevgeoSubdata10 subdata10 = 1;
+}
+
+message Gsp57RevgeoSubdata12 {
+  Gsp57RevgeoSubdata10 subdata10 = 1;
+}
+
+message Gsp57RevgeoSubdata13 {
+  int32 unknown_varint2 = 2;
+  int32 unknown_varint4 = 4;
+}
+
+message Gsp57RevgeoSubdata14 {
+  int32 unknown_varint1 = 1;
+}
+
+message Gsp57RevgeoSubdata15 {
+  Gsp57RevgeoSubdata16 subdata16 = 5;
+  Gsp57RevgeoSubdata16 subdata16_1 = 6;
+  Gsp57RevgeoSubdata17 subdata17 = 7;
+  int32 unknown_varint8 = 8;
+}
+
+message Gsp57RevgeoSubdata16 {
+  Gsp57RevgeoSubdata17 subdata17 = 1;
+  optional int32 unknown_varint2 = 2;
+  optional int32 unknown_varint8 = 8;
+}
+
+message Gsp57RevgeoSubdata17 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp57RevgeoSubdata18 {
+  int32 unknown_varint3 = 3;
+  int32 unknown_varint4 = 4;
+}
+
+
+message Gsp57RevgeoSubstring1 {
+  Gsp57RevgeoSubstring2 substring2 = 4;
+}
+
+message Gsp57RevgeoSubstring2 {
+  int32 unknown_varint3 = 3;
+  Gsp57RevgeoSubstring3 substring3 = 4;
+}
+
+message Gsp57RevgeoSubstring3 {
+  Gsp57RevgeoSubstring4 substring4 = 1;
+  double unknown_double3 = 3;
+  double unknown_double5 = 5;
+}
+
+
+message Gsp57RevgeoSubstring4 {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+

@@ -1,0 +1,121 @@
+syntax = "proto3";
+
+package gsp36.revgeo.request;
+
+message Gsp36RevgeoRequest {
+  Gsp36RevgeoServiceData service_data = 1;
+  Gsp36RevgeoCountryData country_data = 2;
+  string country_code = 3;
+  repeated Gsp36RevgeoSubdata subdata = 5;
+  int32 unknown_varint7 = 7;
+  Gsp36RevgeoSubstring1 substring1 = 8;
+  string country = 9;
+}
+
+message Gsp36RevgeoSubdata {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint3 = 3;
+  optional Gsp36RevgeoSubdata6 subdata6 =5;
+}
+
+message Gsp36RevgeoServiceData {
+  string service = 1;
+  string version = 2;
+  string unknown_string3 = 3;
+  string model = 4;
+  string ios_version = 5;
+  int32 unknown_varint7 = 7;
+  Gsp36RevgeoSubdata1 subdata1 = 8;
+  int32 unknown_varint9 = 9;
+  int32 unknown_varint12 = 12;
+  Gsp36RevgeoSubdata2 subdata2 = 13;
+  Gsp36RevgeoOs os = 14;
+  double unknown_double18 = 18;
+}
+
+message Gsp36RevgeoCountryData {
+  string language = 1;
+  string country_code = 3;
+  string unknown_string9 = 9;
+  int32 unknown_varint10 = 10;
+  int32 unknown_varint11 = 11;
+  int32 unknown_varint12 = 12;
+  int32 unknown_varint16 = 16;
+  int32 unknown_varint19 = 19;
+  Gsp36RevgeoSubdata3 subdata3 = 23;
+  int32 unknown_varint26 = 26;
+  string unknown_string28 = 28;
+  string country = 30;
+  int32 unknown_varint31 = 31;
+  Gsp36RevgeoSubdata4 subdata4 = 100;
+}
+
+message Gsp36RevgeoOs {
+  double unknown_double13 = 13;
+}
+
+message Gsp36RevgeoSubdata1 {
+  int64 unknown_varint1 = 1;
+  int64 unknown_varint2 = 2;
+}
+
+message Gsp36RevgeoSubdata2 {
+  int32 unknown_varint1 = 1;
+  string uuid = 2;
+}
+
+message Gsp36RevgeoSubdata3 {
+  repeated int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp36RevgeoSubdata4 {
+  Gsp36RevgeoSubdata5 subdata5 = 5;
+}
+
+message Gsp36RevgeoSubdata5 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp36RevgeoSubdata6 {
+  Gsp36RevgeoSubdata7 subdata7 = 31;
+}
+
+message Gsp36RevgeoSubdata7 {
+  string version = 1;
+}
+
+message Gsp36RevgeoSubstring1 {
+  Gsp36RevgeoSubstring2 substring2 = 25;
+  // int32 unknown_varint2 = 2;
+}
+
+message Gsp36RevgeoSubstring2 {
+  repeated Gsp36RevgeoSubstring3 substring3 = 1;
+  repeated int32 unknown_varint2 = 2;
+}
+
+message Gsp36RevgeoSubstring3 {
+  Gsp36RevgeoSubstring4 substring4 = 1;
+  // repeated Gsp36RevgeoBssidInfo bssid_info = 2;
+  // int32 timestamp_begin = 3;
+  // int32 timestamp_end = 4;
+  double unknown_double5 = 5;
+}
+
+message Gsp36RevgeoBssidInfo {
+  string bssid = 1;
+  int32 signal_strength = 2;
+  int32 channel = 3;
+  int32 timestamp = 4;
+  int32 unknown_varint5 = 5;
+}
+
+message Gsp36RevgeoSubstring4 {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+
+

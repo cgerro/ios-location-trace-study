@@ -1,0 +1,391 @@
+syntax = "proto3";
+
+package gsp.dispatcher.response;
+
+message GspDispatcherResponse {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  optional Substring1 substring3 = 3;
+  optional string country_language = 5;
+  optional string country_code = 6;
+  Substring substring9 = 9;
+  optional GspDispatcherString substring10 = 10;
+}
+
+message Substring {
+  int32 unknown_varint1 = 1;
+}
+
+message Substring1 {
+  optional Substring3 substring4 = 4;
+  optional Substring2 substring15 = 15;
+}
+
+message Substring2 {
+  string action = 1;
+}
+
+message Substring3 {
+  int32 unknown_varint100 = 100;
+}
+
+message GspDispatcherString {
+  int32 unknown_varint1 = 1;
+  GspDispatcherSubstring substr2 = 2;
+}
+
+message GspDispatcherSubstring1 {
+  int32 unknown_varint100 = 100;
+}
+
+message GspDispatcherSubstring {
+  int32 unknown_varint2 = 2;
+  repeated GspDispatcherSubstring2 substr4 = 4;
+  int32 unknown_varint5 = 5;
+  GspDispatcherSubstring39 substr7 = 7;
+}
+
+message GspDispatcherSubstring39 {
+  GspDispatcherSubstring40 substr1 = 1;
+}
+
+message GspDispatcherSubstring40 {
+  GspDispatcherLocation location = 2;
+  int32 unknown_varint3 = 3;
+  int64 unknown_varint4 = 4;
+  int32 unknown_varint50 = 50;
+}
+
+message GspDispatcherSubstring2 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  optional int32 unknown_varint4 = 4;
+  optional int32 unknown_varint5 = 5;
+  optional int32 unknown_varint6 = 6;
+  optional GspDispatcherSubstring3 substr8 = 8;
+  repeated string apple_service = 9;
+  optional int32 unknown_varint10 = 10;
+  optional GspDispatcherSubstring4 substr11 = 11;
+  int32 unknown_varint12 = 12;
+}
+
+message GspDispatcherSubstring3 {
+  optional GspdispatcherSubstring5 substr1 = 1;
+  optional GspDispatcherSubstring6 substr2 = 2;
+  optional GspDispatcherSubstring7 substr3 = 3;
+  optional GspDispatcherSubstring8 substr4 = 4;
+  optional GspDispatcherSubstring9 substr31 = 31;
+  optional GspDispatcherSubstring10 substr41 = 41;
+  optional GspDispatcherSubstring11 substr44 = 44;
+  optional GspDispatcherSubstring12 substr56 = 56;
+  optional GspDispatcherSubstring13 substr59 = 59;
+  optional GspDispatcherSubstring36 substr66 = 66;
+  optional GspDispatcherSubstring14 substr77 = 77;
+}
+
+message GspdispatcherSubstring5 {
+  int32 unknown_varint1 = 1;
+  GspDispatcherSubstring15 substr5 = 5;
+  GspDispatcherSubstring35 substr10 = 10;
+  int32 unknown_varint19 = 19;
+}
+
+message GspDispatcherSubstring15 {
+  string country_language = 1;
+  string address_request = 3;
+}
+
+message GspDispatcherSubstring35 {
+  string country_language = 1;
+  string place = 3;
+}
+
+message GspDispatcherSubstring36 {
+  repeated GspDispatcherSubstring37 substr1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message GspDispatcherSubstring37 {
+  GspDispatcherSubstring38 substr1 = 1;
+}
+
+message GspDispatcherSubstring38 {
+  int64 unknown_varint1 = 1;
+  GspDispatcherLocation location = 2;
+  int32 unknown_varint3 = 3;
+  int32 unknown_varint50 = 50;
+}
+
+
+message GspDispatcherSubstring4 {
+  string place_request_id = 2;
+}
+
+message GspDispatcherSubstring10 {
+  GspDispatcherSubstring16 substr10000 = 10000;
+}
+
+message GspDispatcherSubstring16 {
+  GspDispatcherSubstring17 substr1 = 1;
+  int32 unknown_varint7 = 7;
+  GspDispatcherSubstring18 substr8 = 8;
+}
+
+message GspDispatcherSubstring18 {
+  GspDispatcherSubstring19 substr4 = 4;
+}
+
+message GspDispatcherSubstring17 {
+  string service = 1;
+}
+
+message GspDispatcherSubstring19 {
+  int32 unknown_varint3 = 3;
+  GspDispatcherSubstring20 substr4 = 4;
+}
+
+message GspDispatcherSubstring20 {
+  GspDispatcherLocationRequest loc_request = 1;
+  double unknown_double3 = 3;
+  double unknown_double5 = 5;
+}
+
+message GspDispatcherLocationRequest {
+  double lat_request = 1;
+  double long_request = 2;
+}
+
+message GspDispatcherSubstring11 {
+  int32 unknown_varint1 = 1;
+}
+
+message GspDispatcherSubstring8 {
+  GspDispatcherLocations locations = 1;
+  GspDispatcherLocations locations1 = 2;
+}
+
+message GspDispatcherLocations {
+  double lat1 = 5;
+  double long1 = 6;
+  double lat2 = 7;
+  double long2 = 8;
+  int32 unknown_varint4 = 4;
+}
+
+message GspDispatcherSubstring7 {
+  GspDispatcherSubstring21 substr1 = 1;
+}
+
+message GspDispatcherSubstring21 {
+  GspDispatcherLocationRequest loc_request = 1;
+  int32 unknown_varint2 = 2;
+  int32 unknown_varint3 = 3;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint13 = 13;
+}
+
+message GspDispatcherSubstring9 {
+  GspDispatcherSubstring22 substr1 = 1;
+}
+
+message GspDispatcherSubstring22 {
+  int32 unknown_varint1 = 1;
+  string version = 2;
+  GspDispatcherSubstring23 substr3 = 3;
+  GspDispatcherServiceInfo service_info = 4;
+  GspDispatcherStreet street = 101;
+}
+
+message GspDispatcherSubstring23 {
+  string country_language = 1;
+  string country_code = 2;
+  string unknown_string3 = 3;
+}
+
+message GspDispatcherServiceInfo {
+  string service = 1;
+  int64 unknown_varint2 = 2;
+  string function = 3;
+  string version = 4;
+}
+
+message GspDispatcherStreet {
+  string street_number = 1;
+  GspDispatcherAddress address = 2;
+  string street_strange = 4;
+  GspDispatcherAddressInfoSecond address_info_second = 5;
+  GspDispatcherSubstring4 substring7 = 7;
+  GspDispatcherAddressInfoThird address_info_third = 100;
+}
+
+message GspDispatcherAddress {
+  repeated string address_data = 11;
+  GspDispatcherAddressInfoFirst address_info_first = 15;
+}
+
+message GspDispatcherAddressInfoFirst {
+  string country = 1;
+  string country_code = 2;
+  string region = 3;
+  string department = 4;
+  string city1 = 5;
+  string city2 = 6;
+  string postal_code = 7;
+  string quartier = 8;
+  string street = 10;
+  string number = 11;
+  string street_number = 12;
+  repeated string district_info = 17;
+}
+
+message GspDispatcherAddressInfoSecond {
+  string country1 = 1;
+  string country2 = 2;
+  string region1 = 3;
+  string region2 = 4;
+  string city1 = 5;
+  string city2 = 6;
+  string district = 8;
+  string street = 10;
+  optional string street_strange1 = 11;
+  string street_strange2 = 12;
+  repeated string district_info = 17;
+}
+
+message GspDispatcherAddressInfoThird {
+  string city1 = 1;
+  string street = 10;
+  string address = 5;
+  string city2 = 6;
+}
+
+message GspDispatcherSubstring12 {
+  int32 unknown_varint1 = 1;
+  GspDispatcherLocationInfo location_info = 2;
+}
+
+message GspDispatcherLocationInfo {
+  string street_number = 1;
+  string district = 2;
+  double unknown_double3 = 3;
+  double unknown_double4 = 4;
+  string city = 5;
+}
+
+message GspDispatcherSubstring14 {
+  GspDispatcherSubstring24 substr1 = 1;
+  string country_code = 2;
+  string country_state_code = 3;
+}
+
+message GspDispatcherSubstring24 {
+  float unknown_float1 = 1;
+  float unknown_float2 = 2;
+}
+
+message GspDispatcherSubstring13 {
+  optional GspDispatcherSubstring25 substr4 = 4;
+}
+
+message GspDispatcherSubstring25 {
+  GspDispatcherSubstring26 substr2 = 2;
+  GspDispatcherLocationRequest loc_request = 6;
+  GspDispatcherLocation location = 7;
+}
+
+message GspDispatcherSubstring26 {
+  int64 unknown_varint1 = 1;
+  repeated GspDispatcherSubstring34 substr2 = 2;
+  int32 unknown_varint4 = 4;
+  int64 unknown_varint5 = 5;
+  GspDispatcherLocation location = 6;
+  GspDispatcherSubstring27 substr8 = 8;
+  GspDispatcherSubstring28 substr10 = 10;
+  GspDispatcherSubstring29 substr11 = 11;
+  GspDispatcherSubstring30 substr12 = 12;
+}
+
+message GspDispatcherSubstring34 {
+  int32 unknown_varint1 = 1;
+  GspDispatcherSubstring31 substr4 = 4;
+  GspDispatcherSubstring32 substr5 = 5;
+  int32 unknown_varint6 = 6;
+}
+
+message GspDispatcherSubstring31 {
+  int32 unknown_varint1 = 1;
+  double unknown_double2 = 2;
+  double unknown_double3 = 3;
+  double unknown_double4 = 4;
+  double unknown_double5 = 5;
+  double unknown_double6 = 6;
+  double unknown_double7 = 7;
+  double unknown_double8 = 8;
+  double unknown_double9 = 9;
+  double unknown_double10 = 10;
+}
+
+message GspDispatcherSubstring32 {
+  double unknown_double1 = 1;
+  double unknown_double2 = 2;
+  double unknown_double3 = 3;
+  double unknown_double4 = 4;
+  double unknown_double5 = 5;
+  double unknown_double6 = 6;
+
+}
+
+message GspDispatcherLocation {
+  double latitude = 1;  // correspond même adresse que lat request
+  double longitude = 2; // correspond même adresse que long request
+  optional double altitude =  3;
+}
+
+message GspDispatcherSubstring27 {
+  int32 unknown_varint1 = 1;
+  int64 unknown_varint3 = 3;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint5 = 5;
+  int32 unknown_varint6 = 6;
+  int32 unknown_varint9 = 9;
+  int32 unknown_varint10 = 10;
+  int32 unknown_varint11 = 11;
+  int32 unknown_varint12 = 12;
+}
+
+message GspDispatcherSubstring28 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  int64 unknown_varint3 = 3;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint5 = 5;
+  int32 unknown_varint6 = 6;
+}
+
+message GspDispatcherSubstring29 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  int64 unknown_varint3 = 3;
+}
+
+message GspDispatcherSubstring30 {
+  repeated int32 unknown_varint1 = 1;
+}
+
+message GspDispatcherSubstring6 {
+  GspDispatcherLocation location = 1;
+  GspDispatcherTimezone timezone = 4;
+  int32 unknown_varint6 = 6;
+  GspDispatcherSubstring33 substring7 = 7;
+
+}
+
+message GspDispatcherTimezone {
+  string timezone = 1;
+}
+
+message GspDispatcherSubstring33 {
+  string unknown_string1 = 1;
+}
+
+

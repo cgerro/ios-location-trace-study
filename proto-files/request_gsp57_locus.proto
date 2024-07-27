@@ -1,0 +1,123 @@
+syntax = "proto3";
+
+package gsp57.locus.request;
+
+message Gsp57LocusRequest {
+  Gsp57LocusServiceData service_data = 1;
+  Gsp57LocusCountryData country_data = 2;
+  string country_code = 3;
+  repeated Gsp57LocusSubdata subdata = 5;
+  int32 unknown_varint7 = 7;
+  Gsp57LocusSubstring1 substring1 = 8;
+  string country = 9;
+}
+
+message Gsp57LocusSubdata {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint3 = 3;
+  optional Gsp57LocusSubdata6 subdata6 =5;
+}
+
+message Gsp57LocusServiceData {
+  string service = 1;
+  string version = 2;
+  string unknown_string3 = 3;
+  string model = 4;
+  string ios_version = 5;
+  int32 unknown_varint7 = 7;
+  Gsp57LocusSubdata1 subdata1 = 8;
+  int32 unknown_varint9 = 9;
+  int32 unknown_varint12 = 12;
+  Gsp57LocusSubdata2 subdata2 = 13;
+  string os = 14;
+  double unknown_double18 = 18;
+}
+
+message Gsp57LocusCountryData {
+  string language = 1;
+  string country_code = 3;
+  string unknown_string9 = 9;
+  int32 unknown_varint10 = 10;
+  int32 unknown_varint11 = 11;
+  int32 unknown_varint12 = 12;
+  int32 unknown_varint16 = 16;
+  int32 unknown_varint19 = 19;
+  Gsp57LocusSubdata3 subdata3 = 23;
+  int32 unknown_varint26 = 26;
+  string unknown_string28 = 28;
+  string country = 30;
+  int32 unknown_varint31 = 31;
+  Gsp57LocusSubdata4 subdata4 = 100;
+}
+
+message Gsp57LocusOs {
+  double unknown_double13 = 13;
+}
+
+message Gsp57LocusSubdata1 {
+  int64 unknown_varint1 = 1;
+  int64 unknown_varint2 = 2;
+}
+
+message Gsp57LocusSubdata2 {
+  int32 unknown_varint1 = 1;
+  string uuid = 2;
+}
+
+message Gsp57LocusSubdata3 {
+  repeated int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp57LocusSubdata4 {
+  Gsp57LocusSubdata5 subdata5 = 5;
+}
+
+message Gsp57LocusSubdata5 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp57LocusSubdata6 {
+  Gsp57LocusSubdata7 subdata7 = 31;
+}
+
+message Gsp57LocusSubdata7 {
+  string version = 1;
+}
+
+message Gsp57LocusSubstring1 {
+  Gsp57LocusSubstring2 substring2 = 32;
+  int32 unknown_varint2 = 2;
+}
+
+message Gsp57LocusSubstring2 {
+  Gsp57LocusSubstring3 substring3 = 1;
+}
+
+message Gsp57LocusSubstring3 {
+  repeated Location location = 1;
+  repeated Gsp57LocusBssidInfo bssid_info = 2;
+  int32 timestamp_begin = 3;
+  int32 timestamp_end = 4;
+}
+
+message Gsp57LocusBssidInfo {
+  string bssid = 1;
+  int32 signal_strength = 2;
+  int32 channel = 3;
+  int32 timestamp = 4;
+  int32 unknown_varint5 = 5;
+}
+
+message Location {
+  Coordinates coordinates = 1;
+  double timestamp = 3;
+  double unknown_double5 = 5;
+}
+
+message Coordinates {
+  double latitude = 1;
+  double longitude = 2;
+}
+

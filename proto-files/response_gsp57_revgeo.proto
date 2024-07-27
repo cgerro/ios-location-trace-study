@@ -1,0 +1,346 @@
+syntax = "proto3";
+
+package gsp57.revgeo.response;
+
+message Gsp57RevgeoResponse {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  Gsp57RevgeoString str = 3;
+  string country_language = 5;
+  string country_code = 6;
+  Gsp57RevgeoString1 str1 = 9;
+  Gsp57RevgeoString2 str2 = 10;
+}
+
+message Gsp57RevgeoString {
+  Gsp57RevgeoSubstring substr = 4;
+}
+
+message Gsp57RevgeoString1 {
+  int32 unknown_varint1 = 1;
+}
+
+message Gsp57RevgeoString2 {
+  int32 unknown_varint1 = 1;
+  Gsp57RevgeoSubstring_a substr1 = 2;
+}
+
+message Gsp57RevgeoSubstring {
+  int32 unknown_varint100 = 100;
+}
+
+message Gsp57RevgeoSubstring_a {
+  int32 unknown_varint2 = 2;
+  repeated Gsp57RevgeoSubstring2 substr2 = 4;
+  int32 unknown_varint5 = 5;
+}
+
+message Gsp57RevgeoSubstring2 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  optional int32 unknown_varint4 = 4;
+  optional int32 unknown_varint5 = 5;
+  optional int32 unknown_varint6 = 6;
+  optional Gsp57RevgeoSubstring3 substr3 = 8;
+  repeated string apple_service = 9;
+  optional int32 unknown_varint10 = 10;
+  optional Gsp57RevgeoSubstring6 substr6 = 11;
+  int32 unknown_varint12 = 12;
+}
+
+message Gsp57RevgeoSubstring3 {
+  optional Gsp57RevgeoSubstring4 substr4 = 1;
+  optional Gsp57RevgeoSubstring33 substr33 = 2;
+  optional Gsp57RevgeoSubstring_15 substr15 = 3;
+  optional Gsp57RevgeoSubstring_14 substr14 = 4;
+  optional Gsp57RevgeoSubstring_17 substr17 = 31;
+  optional Gsp57RevgeoSubstring7 substr7 = 41;
+  optional Gsp57RevgeoSubstring_13 substr13 = 44;
+  optional Gsp57RevgeoSubstring20 substr20 = 56;
+  optional Gsp57RevgeoSubstring23 substr23 = 59;
+  optional Gsp57RevgeoSubstring21 substr21 = 77;
+}
+
+message Gsp57RevgeoSubstring4 {
+  int32 unknown_varint1 = 1;
+  Gsp57RevgeoSubstring5 substr5 = 10;
+  int32 unknown_varint19 = 19;
+}
+
+message Gsp57RevgeoSubstring5 {
+  string country_language = 1;
+  string address_request = 3;
+}
+
+message Gsp57RevgeoSubstring6 {
+  string place_request_id = 2;
+}
+
+message Gsp57RevgeoSubstring7 {
+  Gsp57RevgeoSubstring8 substr8 = 10000;
+}
+
+message Gsp57RevgeoSubstring8 {
+  Gsp57RevgeoSubstring_10 substr10 = 1;
+  int32 unknown_varint7 = 7;
+  Gsp57RevgeoSubstring9 substr9 = 8;
+}
+
+message Gsp57RevgeoSubstring9 {
+  Gsp57RevgeoSubstring_11 substr11 = 4;
+}
+
+message Gsp57RevgeoSubstring_10 {
+  string service = 1;
+}
+
+message Gsp57RevgeoSubstring_11 {
+  int32 unknown_varint3 = 3;
+  Gsp57RevgeoSubstring_12 substr12 = 4;
+}
+
+message Gsp57RevgeoSubstring_12 {
+  Gsp57RevgeoLocationRequest loc_request = 1;
+  double unknown_double3 = 3;
+  double unknown_double5 = 5;
+}
+
+message Gsp57RevgeoLocationRequest {
+  double lat_request = 1;
+  double long_request = 2;
+}
+
+message Gsp57RevgeoSubstring_13 {
+  int32 unknown_varint1 = 1;
+}
+
+message Gsp57RevgeoSubstring_14 {
+  Gsp57RevgeoLocations locations = 1;
+  Gsp57RevgeoLocations locations1 = 2;
+}
+
+message Gsp57RevgeoLocations {
+  double lat1 = 5;
+  double long1 = 6;
+  double lat2 = 7;
+  double long2 = 8;
+  int32 unknown_varint4 = 4;
+}
+
+message Gsp57RevgeoSubstring_15 {
+  Gsp57RevgeoSubstring_16 substr16 = 1;
+}
+
+message Gsp57RevgeoSubstring_16 {
+  Gsp57RevgeoLocationRequest loc_request = 1;
+  int32 unknown_varint2 = 2;
+  int32 unknown_varint3 = 3;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint13 = 13;
+}
+
+message Gsp57RevgeoSubstring_17 {
+  Gsp57RevgeoSubstring_18 substr18 = 1;
+}
+
+message Gsp57RevgeoSubstring_18 {
+  int32 unknown_varint1 = 1;
+  string version = 2;
+  Gsp57RevgeoSubstring_19 substr19 = 3;
+  Gsp57RevgeoServiceInfo service_info = 4;
+  Gsp57RevgeoStreet street = 101;
+}
+
+message Gsp57RevgeoSubstring_19 {
+  string country_language = 1;
+  string country_code = 2;
+  string unknown_string3 = 3;
+}
+
+message Gsp57RevgeoServiceInfo {
+  string service = 1;
+  int64 unknown_varint2 = 2;
+  string function = 3;
+  string version = 4;
+}
+
+message Gsp57RevgeoStreet {
+  string street_number = 1;
+  Gsp57RevgeoAddress address = 2;
+  string street_strange = 4;
+  Gsp57RevgeoAddressInfoSecond address_info_second = 5;
+  Gsp57RevgeoSubstring6 substring6 = 7;
+  Gsp57RevgeoAddressInfoThird address_info_third = 100;
+}
+
+message Gsp57RevgeoAddress {
+  repeated string address_data = 11;
+  Gsp57RevgeoAddressInfoFirst address_info_first = 15;
+}
+
+message Gsp57RevgeoAddressInfoFirst {
+  string country = 1;
+  string country_code = 2;
+  string region = 3;
+  string department = 4;
+  string city1 = 5;
+  string city2 = 6;
+  string postal_code = 7;
+  string quartier = 8;
+  string street = 10;
+  string number = 11;
+  string street_number = 12;
+  repeated string district_info = 17;
+}
+
+message Gsp57RevgeoAddressInfoSecond {
+  string country1 = 1;
+  string country2 = 2;
+  string region1 = 3;
+  string region2 = 4;
+  string city1 = 5;
+  string city2 = 6;
+  string district = 8;
+  string street = 10;
+  optional string street_strange1 = 11;
+  string street_strange2 = 12;
+  repeated string district_info = 17;
+}
+
+message Gsp57RevgeoAddressInfoThird {
+  string city1 = 1;
+  string street = 10;
+  string address = 5;
+  string city2 = 6;
+}
+
+message Gsp57RevgeoSubstring20 {
+  int32 unknown_varint1 = 1;
+  Gsp57RevgeoLocationInfo location_info = 2;
+}
+
+message Gsp57RevgeoLocationInfo {
+  string street_number = 1;
+  string district = 2;
+  double unknown_double3 = 3;
+  double unknown_double4 = 4;
+  string city = 5;
+}
+
+message Gsp57RevgeoSubstring21 {
+  Gsp57RevgeoSubstring22 substr22 = 1;
+  string country_code = 2;
+  string country_state_code = 3;
+}
+
+message Gsp57RevgeoSubstring22 {
+  float unknown_float1 = 1;
+  float unknown_float2 = 2;
+}
+
+message Gsp57RevgeoSubstring23 {
+  optional Gsp57RevgeoSubstring24 substr24 = 4;
+}
+
+message Gsp57RevgeoSubstring24 {
+  Gsp57RevgeoSubstring25 substr25 = 2;
+  Gsp57RevgeoLocationRequest loc_request = 6;
+  Gsp57RevgeoLocation location = 7;
+}
+
+message Gsp57RevgeoSubstring25 {
+  int64 unknown_varint1 = 1;
+  repeated Gsp57RevgeoSubstring26 substr26 = 2;
+  int32 unknown_varint4 = 4;
+  int64 unknown_varint5 = 5;
+  Gsp57RevgeoLocation location = 6;
+  Gsp57RevgeoSubstring29 substr29 = 8;
+  Gsp57RevgeoSubstring30 substr30 = 10;
+  Gsp57RevgeoSubstring31 substr31 = 11;
+  Gsp57RevgeoSubstring32 substr32 = 12;
+}
+
+message Gsp57RevgeoSubstring26 {
+  int32 unknown_varint1 = 1;
+  Gsp57RevgeoSubstring27 substr27 = 4;
+  Gsp57RevgeoSubstring28 substr28 = 5;
+  int32 unknown_varint6 = 6;
+}
+
+message Gsp57RevgeoSubstring27 {
+  int32 unknown_varint1 = 1;
+  double unknown_double2 = 2;
+  double unknown_double3 = 3;
+  double unknown_double4 = 4;
+  double unknown_double5 = 5;
+  double unknown_double6 = 6;
+  double unknown_double7 = 7;
+  double unknown_double8 = 8;
+  double unknown_double9 = 9;
+  double unknown_double10 = 10;
+}
+
+message Gsp57RevgeoSubstring28 {
+  double unknown_double1 = 1;
+  double unknown_double2 = 2;
+  double unknown_double3 = 3;
+  double unknown_double4 = 4;
+  double unknown_double5 = 5;
+  double unknown_double6 = 6;
+
+}
+
+message Gsp57RevgeoLocation {
+  double lat = 1;  // correspond même adresse que lat request
+  double long = 2; // correspond même adresse que long request
+  optional double altitude =  3;
+}
+
+message Gsp57RevgeoSubstring29 {
+  int32 unknown_varint1 = 1;
+  int64 unknown_varint3 = 3;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint5 = 5;
+  int32 unknown_varint6 = 6;
+  int32 unknown_varint9 = 9;
+  int32 unknown_varint10 = 10;
+  int32 unknown_varint11 = 11;
+  int32 unknown_varint12 = 12;
+}
+
+message Gsp57RevgeoSubstring30 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  int64 unknown_varint3 = 3;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint5 = 5;
+  int32 unknown_varint6 = 6;
+}
+
+message Gsp57RevgeoSubstring31 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  int64 unknown_varint3 = 3;
+}
+
+message Gsp57RevgeoSubstring32 {
+  repeated int32 unknown_varint1 = 1;
+}
+
+message Gsp57RevgeoSubstring33 {
+  Gsp57RevgeoLocation location = 1;
+  Gsp57RevgeoTimezone timezone = 4;
+  int32 unknown_varint6 = 6;
+  Gsp57RevgeoSubstring34 substring34 = 7;
+
+}
+
+message Gsp57RevgeoTimezone {
+  string timezone = 1;
+}
+
+message Gsp57RevgeoSubstring34 {
+  string unknown_string1 = 1;
+}
+
+

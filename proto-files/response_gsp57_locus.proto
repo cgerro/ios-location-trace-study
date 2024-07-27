@@ -1,0 +1,246 @@
+syntax = "proto3";
+
+package gsp57.locus.response;
+
+message Gsp57LocusResponse {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  string country_language = 5;
+  string country_code = 6;
+  Substring substring9 = 9;
+  Substring1 substring10 = 10;
+}
+
+message Substring {
+  int32 unknown_varint1 = 1;
+}
+
+message Substring1 {
+  int32 unknown_varint1 = 1;
+  Substring2 substring2 = 2;
+}
+
+message Substring2 {
+  int64 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  repeated Substring3 substring4 = 4;
+  int32 unknown_varint5 = 5;
+  Substring22 substring7 = 7;
+  int64 unknown_varint8 = 8;
+  Substring24 substring9 = 9;
+  int64 unknown_varint1607 = 1607;
+}
+
+message Substring3 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  int32 unknown_varint4 = 4;
+  int32 unknown_varint6 = 6;
+  Substring4 substring8 = 8;
+  repeated string services = 9;
+  int32 unknown_varint10 = 10;
+  Substring5 substring11 = 11;
+  int32 unknown_varint12 = 12;
+}
+
+message Substring4 {
+  Substring6 substring1 = 1;
+  Substring14 substring14 = 2;
+  Substring15 substring3 = 3;
+  Substring17 substring31 = 31;
+}
+
+message Substring6 {
+  int32 unknown_varint1 = 1;
+  string tel_number1 = 2;
+  string tel_number2 = 4;
+  string website = 6;
+  Substring7 substring10 = 10;
+  Substring7 substring11 = 11;
+  repeated Substring8 substring12 = 12;
+  int32 unknown_varint17 = 17;
+  int32 unknown_varint18 = 18;
+  int32 unknown_varint19 = 19;
+  Substring10 substring25 = 25;
+  string category = 26;
+  string types = 27;
+  int32 unknown_varint28 = 28;
+  int32 unknown_varint31 = 31;
+  string types1 = 33;
+  Substring12 substring38 = 38;
+  int64 unknown_varint39 = 39;
+}
+
+message Substring7 {
+  string language = 1;
+  string city = 2;
+  string entity_name = 3;
+}
+
+message Substring8 {
+  int32 unknown_varint1 = 1;
+  Substring9 substring3 = 3;
+  string type = 4;
+}
+
+message Substring9 {
+  string language = 1;
+  string category = 3;
+}
+
+message Substring10 {
+  repeated Substring11 substring1 = 1;
+}
+
+message Substring11 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}
+
+message Substring12 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+  int32 unknown_varint3 = 3;
+}
+
+message Substring5 {
+    int32 unknown_varint1 = 1;
+    Substring13 substring3 = 3;
+    // optional string unknown_string3 = 3;
+}
+
+message Substring13 {
+  double unknown_double = 6;
+  int32 unknown_varint7 = 7;
+}
+
+message Substring14 {
+  Coordinates coordinates = 1;
+  Timezone timezone = 4;
+  Datasource datasource = 7;
+}
+
+message Coordinates {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message Timezone {
+  string timezone = 1;
+}
+
+message Datasource {
+  string datasource = 1;
+}
+
+message Substring15 {
+  repeated Substring16 substring1 = 1;
+}
+
+message Substring16 {
+  Coordinates coordinates = 1;
+  int32 unknown_varint3 = 3;
+}
+
+message Substring17 {
+  Substring18 substring1 = 1;
+}
+
+message Substring18 {
+  int32 unknown_varint1 = 1;
+  string version = 2;
+  Substring19 substring3 = 3;
+  Substring20 substring4 = 4;
+  Substring21 substring101 = 101;
+}
+
+message Substring19 {
+  string language = 1;
+  string unknown_string2 = 2;
+  string unknown_string3 = 3;
+}
+
+message Substring20 {
+  string service = 1;
+  int32 unknown_varint2 = 2;
+  string unknown_string3 = 3;
+  string version = 4;
+}
+
+message Substring21 {
+  Location location = 2;
+  string unknown_string5 = 5;
+  string unknown_string7 = 7;
+}
+
+message Location {
+  repeated string info_location = 11;
+  InfoLocation infoloc = 15;
+}
+
+message InfoLocation {
+  string country = 1;
+  string country_code = 2;
+  string state = 3;
+  string state_code = 4;
+  string city1 = 5;
+  string city2 = 6;
+}
+
+message Substring22 {
+  Substring23 substring1 = 1;
+}
+
+message Substring23 {
+  int64 unknown_varint1 = 1;
+  Coordinates coordinates = 2;
+  int32 unknown_varint3 = 3;
+  int32 unknown_varint50 = 50;
+}
+
+message Substring24 {
+  repeated Substring25 substring1 = 1;
+}
+
+message Substring25 {
+  int64 unknown_varint1 = 1;
+  Substring26 substring2 = 2;
+}
+
+message Substring26 {
+  Substring27 substring9 = 9;
+}
+
+message Substring27 {
+  repeated Substring28 substring1 = 1;
+  Substring31 substring2 = 2;
+}
+
+message Substring28 {
+  int32 unknown_varint1 = 1;
+  optional Substring29 substring3 = 3;
+}
+
+message Substring29 {
+  int64 unknown_varint1 = 1;
+  repeated Substring30 substring3 = 3;
+}
+
+message Substring30 {
+  int64 unknown_varint1 = 1;
+}
+
+message Substring31 {
+  repeated Substring32 substring1 = 1;
+}
+
+message Substring32 {
+  string service = 1;
+  int32 unknown_varint3 = 3;
+  repeated Substring33 substring4 = 4;
+}
+
+message Substring33 {
+  int32 unknown_varint1 = 1;
+  int32 unknown_varint2 = 2;
+}

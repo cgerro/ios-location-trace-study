@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package pbcwloc.response;
+
+message PbcwlocResponse {
+  int32 unknown_varint1 = 1;
+}
